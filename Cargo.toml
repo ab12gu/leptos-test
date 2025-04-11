@@ -1,0 +1,15 @@
+[package]
+name = "leptos-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = "0.3"
+wasm-bindgen = "0.2"
+wasm-pack = "0.10"
+server_fn_macro = { version = "0.3.1", features = ["stable"] }
+
+[[bin]]
+name = "leptos-test"
+path = "src/main.rs"
+
