@@ -1,18 +1,16 @@
+# Faster build than rust:nightly-bullseye which is full debian
 FROM rustlang/rust:nightly-slim AS builder
 
 WORKDIR /usr/src/app
 
-# Install build dependencies for openssl-sys
+# Install required packages
 RUN apt-get update && apt-get install -y \
-    pkg-config \
-    libssl-dev \
     build-essential \
-    ca-certificates \
-    curl \
     perl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy manifest and create dummy src to fetch deps
+# This is to avoid downloading all the dependencies every time we change the source code
 COPY Cargo.toml ./
 RUN mkdir src && echo "fn main() {}" > src/main.rs
 RUN cargo fetch
@@ -23,7 +21,8 @@ COPY . .
 # Build the named binary explicitly
 RUN cargo build --release --bin leptos-test
 
-# Use slim final image
+# Build the wasm target
+# RUN rustup target add wasm32-unknown-unknown
 
 # Final stage
 FROM debian:bookworm-slim
