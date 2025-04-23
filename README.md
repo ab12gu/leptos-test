@@ -1,7 +1,14 @@
 # leptos-test
 Test leptos framework to assist w/ isaac's scouting app
 
-# Run
+# Local Development
+
+To serve the docker build locally run: 
+```
+$ docker-compose up
+```
+
+# Deployment
 
 Build image locally:
 ```
