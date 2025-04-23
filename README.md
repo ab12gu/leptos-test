@@ -8,6 +8,11 @@ To serve the docker build locally run:
 $ docker-compose up
 ```
 
+To stop container without removing it:
+```
+$ docker-compose down
+```
+
 # Deployment
 
 Build image locally:
