@@ -6,11 +6,17 @@ Test leptos framework to assist w/ isaac's scouting app
 To serve the docker build locally run: 
 ```
 $ docker-compose up
+$ docker-compose up --build --detach # to rebuild
 ```
 
 To stop container without removing it:
 ```
 $ docker-compose down
+```
+
+To delete all existing containers, networks, volumes, and images
+```
+$ docker-compose down --volumes --rmi all
 ```
 
 # Deployment

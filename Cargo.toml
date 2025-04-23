@@ -8,6 +8,8 @@ leptos = "0.3"
 wasm-bindgen = "0.2"
 wasm-pack = "0.10"
 server_fn_macro = { version = "0.3.1", features = ["stable"] }
+axum = "0.6" # Add the Axum crate
+tokio = { version = "1", features = ["full"] } # Axum requires Tokio as an async runtime
 
 [[bin]]
 name = "leptos-test"
