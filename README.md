@@ -1,6 +1,9 @@
 # leptos-test
 Test leptos framework to assist w/ isaac's scouting app
 
+Blue alliance api keys:
+https://www.thebluealliance.com/account
+
 # Local Development
 
 To serve the docker build locally run: 
