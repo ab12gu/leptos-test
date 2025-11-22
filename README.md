@@ -2,7 +2,10 @@
 Test leptos framework to assist w/ isaac's scouting app
 
 Blue alliance api keys:
-https://www.thebluealliance.com/account
+- https://www.thebluealliance.com/account
+
+Leptos Framework book
+- https://github.com/leptos-rs/book
 
 # Local Development
 
